@@ -35,6 +35,7 @@
     "nodemailer": "^6.9.9",
     "npm": "^10.4.0",
     "randomstring": "^1.3.0",
+    "react": "^18.2.0",
     "redis": "^4.6.12",
     "stripe": "^14.21.0"
   },
