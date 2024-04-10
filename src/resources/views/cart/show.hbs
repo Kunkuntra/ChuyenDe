@@ -35,9 +35,9 @@
                     <td>{{ this.product.name}}</td>
                     <td class="unit-price">{{ this.product.currentPrice }}</td>
                     <td>
-                        <button class="btn-sub-cart">-</button>
-                        <span class="quantity-cart">{{ this.quantity }}</span>
-                        <button class="btn-add-cart">+</button>
+                        <button type="button" class="btn-sub-cart">-</button>
+                        <span  class="quantity-cart">{{ this.quantity }}</span>
+                        <button type="button" class="btn-add-cart">+</button>
                     </td>
                     <td class="total-amount">{{ multi this.quantity this.product.currentPrice }}</td>
                     <td>
