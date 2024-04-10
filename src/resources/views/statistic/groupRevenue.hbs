@@ -1,12 +1,18 @@
 <div class="container mt-4">
-    <h2 class="mb-4">Báo cáo doanh thu ngày {{dailyRevenue.date}}</h2> 
-    <a href="/statistic/group-revenue">Chọn ngày</a>
+    <h2 class="mb-4">Báo cáo doanh thu từ ngày {{dailyRevenue.dateStart}} đến ngày {{dailyRevenue.dateEnd}}</h2>
+    <div class="mt-4">
+        <form action="group-revenue" method="POST">
+            <input type="date" id="startDate" name="startDate">
+            <input type="date" id="endDate" name="endDate">
+            <button type="submit" class="btn btn-primary">Nhập</button>
+        </form>
+    </div>
     <div class="row">
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Doanh thu</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Tổng doanh thu trong ngày</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Tổng doanh thu</h6>
                     <p class="card-text text-success">{{dailyRevenue.totalRevenue}} VND</p>
                 </div>
             </div>
@@ -15,7 +21,7 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Số đơn hàng</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Tổng số đơn hàng trong ngày</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Tổng số đơn hàng</h6>
                     <p class="card-text text-info">{{dailyRevenue.totalOrders}}</p>
                 </div>
             </div>
