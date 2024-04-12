@@ -32,7 +32,7 @@ class AuthController{
             if (existingUser) {
                 return res
                 .status(409)
-                .json({ error: "That email address is already in use." });
+                .render('Notify/signupFail');
             }
             const user = User.create({
                 email : email,
@@ -64,15 +64,7 @@ class AuthController{
                         _id: data._id,
                         admin: data.admin,
                         name: data.name,
-                    },
-                    // process.env.ACCESS_TOKEN_SECRET,
-                    // {
-                    //     expiresIn: "1d",
-            
-                    //     // expiresIn: "365d",
-                    // }
-                    'mk'
-                    );
+                    },'mk');
                 return res.json(token);
             }
         })
