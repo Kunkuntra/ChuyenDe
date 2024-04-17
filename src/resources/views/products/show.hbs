@@ -9,8 +9,9 @@
                 <div class="show__product-price">
                     <span class="price-old">{{product.oldPrice}}đ</span>
                     <span class="price-current">{{product.currentPrice}}đ</span>
-
+                    {{#if product.oldPrice}}
                     <span class="price-percent">{{percent product.oldPrice product.currentPrice}}% GIẢM</span>
+                    {{/if}}
                 </div>
                 <div class="quantity">
                     <span class="quantity__label">Số lượng: </span>

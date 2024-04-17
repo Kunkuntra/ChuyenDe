@@ -10,7 +10,7 @@ const product = new Schema({
     description: { type: String },
     image: { type: String },
     brand: { type: String },
-    currentPrice: { type: Number },
+    currentPrice: { type: Number, required: true },
     oldPrice: { type: Number },
     origin: { type: String },
     remaining: { type: Number },
